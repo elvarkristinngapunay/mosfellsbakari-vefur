@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Mosfellsbakarí — Tertur, brauð og sætabrauð síðan 1982</title>
+<meta name="description" content="Mosfellsbakarí er fjölskyldufyrirtæki sem var stofnað 1982. Í dag eru reknar tvær verslanir — í Mosfellsbæ og Reykjavík." />
+<style>
+  :root{
+    --brand:#9a6526; --brand-dark:#774b18;
+    --accent:#f3901d; --accent-dark:#dd7d0b;
+    --ink:#2a2018; --muted:#7c6f62;
+    --bg:#fffdf8; --surface:#f7efe2; --surface-2:#f1e6d4; --line:#ece0cd;
+    --radius:18px; --maxw:1180px;
+    --serif:"Georgia","Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  section{padding:88px 0}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.01em}
+  h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.74rem;font-weight:700;color:var(--accent-dark);margin-bottom:12px}
+  .lead{color:var(--muted);font-size:1.08rem;max-width:60ch}
+  .center{text-align:center;margin:0 auto}
+  .btn{display:inline-block;border:none;cursor:pointer;font-family:var(--sans);font-size:1rem;
+       background:var(--accent);color:#fff;padding:14px 28px;border-radius:999px;font-weight:700;
+       transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 6px 18px rgba(243,144,29,.28)}
+  .btn:hover{background:var(--accent-dark);transform:translateY(-2px)}
+  .btn.ghost{background:transparent;color:var(--brand-dark);box-shadow:none;border:1.5px solid var(--line)}
+  .btn.ghost:hover{background:var(--surface);transform:translateY(-2px)}
+
+  /* Header */
+  header.site{position:sticky;top:0;z-index:60;background:rgba(255,253,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:700;font-size:1.3rem;color:var(--ink);flex:0 0 auto;white-space:nowrap}
+  .brand img{height:42px;width:auto}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-weight:600;font-size:.97rem;color:var(--ink)}
+  .nav-links a:hover{color:var(--brand)}
+  .nav-right{display:flex;align-items:center;gap:16px}
+  .nav-phone{font-weight:700;color:var(--brand-dark);font-size:.95rem;white-space:nowrap}
+  .nav-cta{background:var(--accent);color:#fff;padding:10px 20px;border-radius:999px;font-weight:700;font-size:.95rem;
+           box-shadow:0 6px 16px rgba(243,144,29,.32);transition:transform .2s,background .2s}
+  .nav-cta:hover{background:var(--accent-dark);transform:translateY(-2px)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+  .burger span{width:25px;height:2px;background:var(--ink);transition:.3s}
+  .mobile-menu{display:none;flex-direction:column;padding:8px 22px 20px;border-bottom:1px solid var(--line);background:var(--bg)}
+  .mobile-menu a{padding:13px 0;font-weight:700;border-bottom:1px solid var(--line)}
+  body.menu-open .mobile-menu{display:flex}
+  body.menu-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  body.menu-open .burger span:nth-child(2){opacity:0}
+  body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .brand-name{display:flex;flex-direction:column;line-height:1.02}
+  .brand-name small{font-family:var(--sans);font-weight:700;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+
+  /* Hero — full-bleed team photo */
+  .hero{position:relative;overflow:hidden;background:var(--ink);color:#fff}
+  .hero-photo{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center 28%}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(to top, rgba(16,11,6,.88) 0%, rgba(16,11,6,.52) 40%, rgba(16,11,6,.22) 72%, rgba(16,11,6,.42) 100%),
+              linear-gradient(to right, rgba(16,11,6,.60) 0%, rgba(16,11,6,0) 62%)}
+  .hero .container{position:relative;z-index:2;display:flex;align-items:flex-end;
+    min-height:min(82vh,700px);padding-top:70px;padding-bottom:56px}
+  .hero-content{max-width:640px}
+  .hero .eyebrow{color:var(--accent)}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.2rem);margin:8px 0 16px;color:#fff;text-shadow:0 2px 22px rgba(0,0,0,.4)}
+  .hero p{font-size:1.15rem;color:#f2e8db;max-width:46ch;margin-bottom:28px;text-shadow:0 1px 14px rgba(0,0,0,.45)}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.55)}
+  .hero .btn.ghost:hover{background:rgba(255,255,255,.14)}
+
+  /* Heritage band — show off the year */
+  .heritage{background:var(--ink);color:#efe3d2;text-align:center;padding:68px 0;position:relative;overflow:hidden}
+  .heritage::before,.heritage::after{content:"";position:absolute;top:0;bottom:0;width:34%;
+    background:radial-gradient(120% 90% at 50% 0%, rgba(243,144,29,.10), transparent 70%)}
+  .heritage::before{left:-6%}.heritage::after{right:-6%}
+  .heritage .container{position:relative}
+  .heritage .h-est{display:inline-flex;align-items:center;gap:16px;text-transform:uppercase;
+    letter-spacing:.36em;font-size:.82rem;font-weight:700;color:var(--accent);padding-left:.36em}
+  .heritage .h-est::before,.heritage .h-est::after{content:"";width:44px;height:1px;background:var(--accent);opacity:.55}
+  .heritage .h-year{font-family:var(--serif);font-weight:600;font-size:clamp(4.5rem,14vw,9rem);
+    line-height:1.02;color:#fff;margin-top:10px;letter-spacing:.01em}
+  .heritage .h-sub{margin-top:12px;color:#cbb79c;font-size:1.06rem}
+
+  /* Section heading */
+  .sec-head{max-width:62ch}
+  .sec-head.center{text-align:center;margin-bottom:46px}
+
+  /* Cake grid */
+  .cakes{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:46px}
+  .cake{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+        transition:transform .25s,box-shadow .25s}
+  .cake:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(60,40,18,.14)}
+  .cake img{width:100%;aspect-ratio:1;object-fit:cover}
+  .cake .label{padding:14px 16px;font-weight:700;font-size:1rem}
+
+  /* Category cards (sérpantanir) */
+  .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px}
+  .cat{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+  .cat img{width:100%;aspect-ratio:16/11;object-fit:cover}
+  .cat .body{padding:22px 22px 24px}
+  .cat h3{font-size:1.3rem;margin-bottom:8px}
+  .cat p{color:var(--muted);font-size:.96rem}
+  .cat .sizes{margin-top:12px;font-size:.84rem;font-weight:700;color:var(--brand-dark);text-transform:uppercase;letter-spacing:.04em}
+  .cat.noimg{background:linear-gradient(160deg,var(--surface),var(--surface-2));border:none}
+  .cat.noimg .pad-top{height:26px}
+
+  /* Order */
+  #pontun{background:linear-gradient(180deg,var(--surface) 0%, var(--bg) 100%)}
+  .order-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start;margin-top:30px}
+  .order-note{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 12px 30px rgba(60,40,18,.07)}
+  .order-note h3{font-size:1.25rem;margin-bottom:14px}
+  .order-note ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .order-note li{display:flex;gap:12px;align-items:flex-start;font-size:.98rem;color:var(--ink)}
+  .order-note .ic{flex:0 0 30px;height:30px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-size:1rem}
+  .order-note .booked{margin-top:18px;font-size:.86rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+  .order-note .callbtns{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+  .order-note .callbtns .btn{display:inline-flex;align-items:center;gap:8px}
+  form.order{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 12px 30px rgba(60,40,18,.07)}
+  .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field.full{grid-column:1 / -1}
+  label{font-size:.84rem;font-weight:700;color:var(--brand-dark)}
+  input,select,textarea{font-family:var(--sans);font-size:1rem;padding:12px 14px;border:1.5px solid var(--line);
+         border-radius:12px;background:var(--bg);color:var(--ink);width:100%}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+  textarea{resize:vertical;min-height:80px}
+  .form-foot{font-size:.82rem;color:var(--muted);text-align:center;margin-top:10px}
+
+  /* Inline icons (replace emoji) */
+  .ico{width:17px;height:17px;flex:0 0 auto;fill:currentColor}
+  .order-note .ic svg{width:17px;height:17px;stroke:var(--brand);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+  /* Order wizard (stepped flow) */
+  .steps{display:flex;gap:8px;list-style:none;margin:0 0 24px;padding:0}
+  .steps li{flex:1;display:flex;align-items:center;gap:9px;font-size:.84rem;font-weight:700;color:var(--muted);
+    padding-bottom:12px;border-bottom:2px solid var(--line);transition:color .2s,border-color .2s}
+  .steps li .num{flex:0 0 24px;height:24px;border-radius:50%;background:var(--surface);color:var(--muted);
+    display:grid;place-items:center;font-size:.8rem;transition:background .2s,color .2s}
+  .steps li.active{color:var(--brand-dark);border-color:var(--accent)}
+  .steps li.active .num{background:var(--accent);color:#fff}
+  .steps li.done{color:var(--brand-dark);border-color:var(--brand)}
+  .steps li.done .num{background:var(--brand);color:#fff}
+  .wstep{animation:fadeStep .3s ease}
+  @keyframes fadeStep{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .wstep h3{font-size:1.2rem;margin-bottom:4px}
+  .wstep .step-sub{color:var(--muted);font-size:.92rem;margin-bottom:18px}
+  .cake-picker{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .pick{position:relative;border:2px solid var(--line);background:var(--bg);border-radius:14px;overflow:hidden;cursor:pointer;
+    padding:0;text-align:left;font-family:inherit;color:inherit;display:flex;flex-direction:column;
+    transition:border-color .2s,box-shadow .2s,transform .2s}
+  .pick:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .pick img{width:100%;aspect-ratio:1;object-fit:cover}
+  .pick .plabel{padding:10px 12px;font-weight:700;font-size:.84rem;line-height:1.25}
+  .pick .check{position:absolute;top:8px;right:8px;width:28px;height:28px;border-radius:50%;
+    background:var(--accent);display:none;place-items:center;box-shadow:0 2px 8px rgba(60,40,18,.28);z-index:2}
+  .pick .check svg{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+  .pick.sel{border-color:var(--accent);box-shadow:0 0 0 4px rgba(243,144,29,.28)}
+  .pick.sel .check{display:grid}
+  .pick.sel .plabel{color:var(--brand-dark)}
+  .pick.sel::after{content:"";position:absolute;inset:0;background:rgba(243,144,29,.10);pointer-events:none}
+  .cake-note{font-size:.88rem;color:var(--muted);background:var(--surface);border-radius:10px;padding:10px 14px;margin-bottom:18px}
+  .cake-note:empty{display:none}
+  .wmsg.ok{color:var(--brand-dark)}
+  .chosen-chip{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border-radius:999px;
+    padding:6px 14px 6px 6px;font-weight:700;font-size:.92rem;margin-bottom:20px}
+  .chosen-chip img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+  .chosen-chip .edit{background:none;border:none;color:var(--accent-dark);cursor:pointer;font-weight:700;
+    font-size:.86rem;font-family:inherit;padding:0 2px;text-decoration:underline}
+  .summary{background:var(--surface);border-radius:14px;padding:16px 18px;margin:4px 0 6px}
+  .summary dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:.93rem;margin:0}
+  .summary dt{color:var(--muted);font-weight:700}
+  .summary dd{text-align:right;font-weight:600;margin:0}
+  .wmsg{font-size:.84rem;color:#b23b18;margin-top:10px;min-height:1.1em;font-weight:600}
+  .wnav{display:flex;justify-content:space-between;gap:12px;margin-top:24px}
+  .wnav .btn{width:auto;margin-top:0}
+  .wnav.end{justify-content:flex-end}
+  @media (max-width:560px){
+    .cake-picker{grid-template-columns:repeat(2,1fr)}
+    .steps li .txt{display:none}
+    .steps li{justify-content:center}
+    .wnav .btn{flex:1}
+  }
+
+  /* Bread */
+  #braud{background:var(--surface)}
+  .bread-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:40px}
+  .bread-grid figure{border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+  .bread-grid img{width:100%;aspect-ratio:1;object-fit:cover}
+  .bread-grid figcaption{padding:10px 12px;font-weight:700;font-size:.85rem;text-align:center}
+
+  /* About */
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .about img{width:100%;border-radius:var(--radius);object-fit:cover;aspect-ratio:4/3;box-shadow:0 20px 44px rgba(60,40,18,.16)}
+  .about p{color:var(--muted);margin-top:14px}
+
+  /* Footer / locations */
+  footer.site{background:var(--ink);color:#e9ddcc;padding:64px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1.1fr 1.1fr 1fr;gap:40px}
+  footer.site h4{font-family:var(--serif);font-size:1.25rem;color:#fff;margin-bottom:6px}
+  footer.site .addr{color:#d9c9b2;font-size:.96rem;margin-bottom:10px}
+  footer.site .hours{font-size:.9rem;color:#bcaa90;line-height:1.7}
+  footer.site a.maplink{display:inline-block;margin-top:10px;color:var(--accent);font-weight:700;font-size:.9rem}
+  footer.site .contact a{display:flex;align-items:center;gap:9px;color:#e9ddcc;margin-bottom:8px;font-size:.96rem}
+  footer.site .contact a:hover{color:var(--accent)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:44px;padding-top:22px;font-size:.85rem;color:#9c8c75;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  @media (max-width:980px){
+    .cakes{grid-template-columns:repeat(3,1fr)}
+    .cats{grid-template-columns:repeat(2,1fr)}
+    .bread-grid{grid-template-columns:repeat(3,1fr)}
+    .order-wrap{grid-template-columns:1fr}
+  }
+  @media (max-width:820px){
+    .nav-links,.nav-phone,.nav-cta{display:none}
+    .burger{display:flex}
+    .hero .container{min-height:min(78vh,600px)}
+    .about{grid-template-columns:1fr;gap:28px}
+    .foot-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    section{padding:60px 0}
+    .cakes{grid-template-columns:repeat(2,1fr)}
+    .cats{grid-template-columns:1fr}
+    .bread-grid{grid-template-columns:repeat(2,1fr)}
+    .fgrid{grid-template-columns:1fr}
+  }
+
+  /* --- Motion: scroll-reveal + gentle zoom (keeps the eye moving, softens older photos) --- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .cake img,.cat img,.bread-grid img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .cake:hover img,.cat:hover img,.bread-grid figure:hover img{transform:scale(1.08)}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .cake img,.cat img,.bread-grid img{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="container nav">
+    <a class="brand" href="#top"><img src="images/logo.jpg" alt="Mosfellsbakarí" /><span>Mosfellsbakarí</span></a>
+    <nav class="nav-links">
+      <a href="#tertur">Skoða tertur</a>
+      <a href="panta.html">Panta tertur</a>
+      <a href="#braud">Brauð</a>
+      <a href="#um">Um okkur</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-cta" href="#hafa-samband">Hafa samband</a>
+      <button class="burger" id="burger" aria-label="Valmynd"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="#tertur">Skoða tertur</a>
+    <a href="panta.html">Panta tertur</a>
+    <a href="#braud">Brauð</a>
+    <a href="#um">Um okkur</a>
+    <a href="#hafa-samband">Hafa samband</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-photo" src="images/starfsfolk.jpg" alt="Starfsfólk Mosfellsbakarís í bakaríinu með nýbökuðum vatnsdeigsbollum">
+    <div class="container">
+      <div class="hero-content">
+        <p class="eyebrow">Fjölskyldufyrirtæki · stofnað 1982</p>
+        <h1>Mosfellsbakarí</h1>
+        <p>Handverksbakarí í Mosfellsbæ og Reykjavík. Fólkið okkar bakar tertur, brauð og sætabrauð á hverjum degi — eins og gert hefur verið síðan 1982.</p>
+        <div class="hero-cta">
+          <a class="btn" href="panta.html">Panta tertu</a>
+          <a class="btn ghost" href="#tertur">Skoða tertur</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERITAGE / 1982 -->
+  <section class="heritage">
+    <div class="container">
+      <p class="h-est">Stofnað</p>
+      <div class="h-year">1982</div>
+      <p class="h-sub">Fjölskyldufyrirtæki í Mosfellsbæ og Reykjavík</p>
+    </div>
+  </section>
+
+  <!-- TERTUR Í VERSLUN -->
+  <section id="tertur">
+    <div class="container">
+      <div class="sec-head">
+        <h2>Tertur í verslun</h2>
+        <p class="lead">Eigum gott úrval af glæsilegum tertum í verslunum okkar í Mosfellsbæ og Reykjavík. Erum með deserttertur og marengstertur í frysti og gott úrval af öðrum tertum í kæli.</p>
+      </div>
+      <div class="cakes">
+        <div class="cake"><img loading="lazy" src="images/terta-klassisk.jpg" alt="Klassísk súkkulaðiterta"><div class="label">Klassísk súkkulaðiterta</div></div>
+        <div class="cake"><img loading="lazy" src="images/terta-amerisk.jpg" alt="Amerísk súkkulaðiterta"><div class="label">Amerísk súkkulaðiterta</div></div>
+        <div class="cake"><img loading="lazy" src="images/terta-fronsk.jpg" alt="Frönsk súkkulaðiterta"><div class="label">Frönsk súkkulaðiterta</div></div>
+        <div class="cake"><img loading="lazy" src="images/terta-gulrotarkaka.jpg" alt="Gulrótarkaka"><div class="label">Gulrótarkaka</div></div>
+        <div class="cake"><img loading="lazy" src="images/terta-sitronukaka.jpg" alt="Sítrónukaka"><div class="label">Sítrónukaka</div></div>
+        <div class="cake"><img loading="lazy" src="images/terta-kaffiterta.jpg" alt="Kaffiterta"><div class="label">Kaffiterta</div></div>
+        <div class="cake"><img loading="lazy" src="images/terta-marengs.jpg" alt="Marengsterta með kókosbollum og karamellu"><div class="label">Marengsterta</div></div>
+        <div class="cake"><img loading="lazy" src="images/terta-oriental.jpg" alt="Oriental mistique"><div class="label">Oriental mistique</div></div>
+        <div class="cake"><img loading="lazy" src="images/terta-rommkulu.jpg" alt="Rommkúluterta"><div class="label">Rommkúluterta</div></div>
+        <div class="cake"><img loading="lazy" src="images/terta-toscamassarina.jpg" alt="Toscamassarína"><div class="label">Toscamassarína</div></div>
+        <div class="cake"><img loading="lazy" src="images/terta-engja.jpg" alt="Englaterta"><div class="label">Englaterta</div></div>
+        <div class="cake"><img loading="lazy" src="images/terta-tiramisu.jpg" alt="Tiramisú"><div class="label">Tiramisú</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SÉRPANTANIR -->
+  <section id="serpantanir" style="background:var(--surface)">
+    <div class="container">
+      <div class="sec-head center">
+        <h2>Sérgerðar tertur</h2>
+        <p class="lead center">Panta þarf allar sérgerðar tertur með þriggja virkra daga fyrirvara, og á miðvikudögum fyrir 12:00, fyrir helgar.</p>
+      </div>
+      <div class="cats">
+        <a class="cat" href="afmaelistertur.html">
+          <img loading="lazy" src="images/afm-cars.jpg" alt="Afmælis- og barnatertur">
+          <div class="body">
+            <h3>Afmælis- &amp; barnatertur</h3>
+            <p>Þriggja laga súkkulaðitertur, skreyttar með lituðu smjörkremi, nammi og texta. Við getum líka prentað myndir ofan á terturnar.</p>
+            <div class="sizes">Sjá nánar &amp; verð →</div>
+          </div>
+        </a>
+        <a class="cat" href="fermingartertur.html">
+          <img loading="lazy" src="images/ferming-sykurmassa.jpg" alt="Fermingartertur">
+          <div class="body">
+            <h3>Fermingartertur</h3>
+            <p>Til í mörgum stærðum og gerðum. Klassíska „sálmabókin“ er fromage-fyllt terta hjúpuð með marsipani eða sykurmassa.</p>
+            <div class="sizes">Sjá nánar &amp; verð →</div>
+          </div>
+        </a>
+        <article class="cat">
+          <img loading="lazy" src="images/skirnar-koddi.jpg" alt="Skírnartertur">
+          <div class="body">
+            <h3>Skírnartertur</h3>
+            <p>Skírnarkoddar hjúpaðir hvítum sykurmassa og skreyttir handgerðum marsipanrósum, marsipanskóm og kögri. Veldu lit á skreytingar.</p>
+            <div class="sizes">Stærðir 12–50 manna</div>
+          </div>
+        </article>
+        <article class="cat">
+          <img loading="lazy" src="images/utskrift-hufa.jpg" alt="Útskriftartertur">
+          <div class="body">
+            <h3>Útskriftartertur</h3>
+            <p>Tertur í laginu eins og stúdentshúfa, skreyttar handgerðum marsipanrósum að eigin litavali.</p>
+            <div class="sizes">Stærðir 12 · 16 · 20 manna</div>
+          </div>
+        </article>
+        <a class="cat" href="veislutertur.html">
+          <img loading="lazy" src="images/tilhamingju.jpg" alt="Veislutertur">
+          <div class="body">
+            <h3>Veislutertur</h3>
+            <p>Gott úrval af veislutertum í nokkrum stærðum og gerðum, m.a. marsipantertur með ýmsum bragðtegundum.</p>
+            <div class="sizes">Sjá nánar &amp; verð →</div>
+          </div>
+        </a>
+        <article class="cat">
+          <img loading="lazy" src="images/kransakaka.png" alt="Kransakökur">
+          <div class="body">
+            <h3>Kransakökur</h3>
+            <p>Skreyttar handgerðum sykurmassablómum og fiðrildum ásamt kransakonfekti. Veldu lit á skreytingar.</p>
+            <div class="sizes">Turnar 20 · 30 · 40</div>
+          </div>
+        </article>
+      </div>
+      <div class="center" style="margin-top:40px"><a class="btn" href="panta.html">Panta tertu</a></div>
+    </div>
+  </section>
+
+  <!-- BRAUÐ -->
+  <section id="braud">
+    <div class="container">
+      <div class="sec-head">
+        <h2>Brauð &amp; sætabrauð</h2>
+        <p class="lead">Hjá Mosfellsbakaríi starfa bakarar sem hafa tileinkað sér fagleg vinnubrögð og leggja þeir mikla áherslu á að nota góð hráefni til að laða fram það góða bragð sem af brauðinu er. Notaðar eru aldagamlar aðferðir, í bland við nýjar, til að gefa hverju brauði sinn karakter.</p>
+      </div>
+      <div class="bread-grid">
+        <figure><img loading="lazy" src="images/braud-sveita.jpg" alt="Sveitabrauð"><figcaption>Sveitabrauð</figcaption></figure>
+        <figure><img loading="lazy" src="images/braud-baguette.jpg" alt="Baguette"><figcaption>Baguette</figcaption></figure>
+        <figure><img loading="lazy" src="images/braud-focaccia.jpg" alt="Focaccia"><figcaption>Focaccia</figcaption></figure>
+        <figure><img loading="lazy" src="images/braud-krydd.jpg" alt="Kryddbrauð"><figcaption>Kryddbrauð</figcaption></figure>
+        <figure><img loading="lazy" src="images/braud-musli.jpg" alt="Múslíbrauð"><figcaption>Múslíbrauð</figcaption></figure>
+        <figure><img loading="lazy" src="images/braud-grind.jpg" alt="Úrval af brauðum"><figcaption>Súrdeigsbrauð</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- UM OKKUR -->
+  <section id="um" style="background:var(--surface)">
+    <div class="container about">
+      <img loading="lazy" src="images/fjolskyldan.jpg" alt="Fjölskyldan í Mosfellsbakaríi" />
+      <div>
+        <p class="eyebrow">Saga Mosfellsbakarís</p>
+        <h2>Mosfellsbakarí var stofnað 1982</h2>
+        <p>Mosfellsbakarí er fjölskyldufyrirtæki sem var stofnað 1982 af hjónunum Ragnari Hafliðasyni og Áslaugu Sveinbjörnsdóttir. Síðan þá hefur bakaríið vaxið og dafnað og í dag eru reknar tvær verslanir.</p>
+        <p>Mosfellsbakarí er ekki einungis í Mosfellsbæ því í janúar 2001 opnaði það búð að Háaleitisbraut 58-60 í Reykjavík.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FÓTUR / STAÐSETNINGAR -->
+<footer class="site" id="hafa-samband">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>Mosfellsbær</h4>
+        <p class="addr">Bjarkarholti 3-5, 270 Mosfellsbæ</p>
+        <p class="hours">Virka daga 7:30–17:30<br>Laugardaga 8:00–16:00<br>Sunnudaga 8:30–16:00</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Bjarkarholti+3-5+Mosfellsb%C3%A6r" target="_blank" rel="noopener">Sjá á korti →</a>
+      </div>
+      <div>
+        <h4>Reykjavík</h4>
+        <p class="addr">Háaleitisbraut 58-60, 108 Reykjavík</p>
+        <p class="hours">Virka daga 7:30–17:00<br>Laugardaga 8:00–16:00<br>Sunnudaga 8:30–16:00</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=H%C3%A1aleitisbraut+58-60+Reykjav%C3%ADk" target="_blank" rel="noopener">Sjá á korti →</a>
+      </div>
+      <div class="contact">
+        <h4>Hafa samband</h4>
+        <a href="tel:+3545666145"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg>566 6145</a>
+        <a href="mailto:mosbak@mosbak.is"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v.4l-10 6-10-6V6a1 1 0 0 1 1-1zm-1 3.2 10 6 10-6V18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8.2z"/></svg>mosbak@mosbak.is</a>
+        <a href="https://www.facebook.com/pages/Mosfellsbakar%C3%AD/101119029927855" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 21v-8h2.6l.4-3H13V8c0-.9.3-1.5 1.6-1.5H16V4.1C15.6 4 14.7 4 13.7 4 11.5 4 10 5.3 10 7.7V10H7.5v3H10v8z"/></svg>Facebook</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Mosfellsbakarí — stofnað 1982</span>
+      <span>Bjarkarholti 3-5, Mosfellsbæ · Háaleitisbraut 58-60, Reykjavík</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('burger').addEventListener('click',()=>document.body.classList.toggle('menu-open'));
+  document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  // Scroll-reveal: fade sections/cards up as they enter view (staggered grids)
+  (function(){
+    var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els=document.querySelectorAll('.sec-head,.cake,.cat,.bread-grid figure,.about img,.about > div,.order-note,form.order');
+    els.forEach(function(el){el.classList.add('reveal');});
+    ['.cakes .cake','.cats .cat','.bread-grid figure'].forEach(function(sel){
+      document.querySelectorAll(sel).forEach(function(el,i){el.style.transitionDelay=(Math.min(i,8)*55)+'ms';});
+    });
+    if(reduce||!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in');});return;}
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  })();
+</script>
+</body>
+</html>

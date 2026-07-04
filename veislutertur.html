@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Veislutertur — Mosfellsbakarí</title>
+<meta name="description" content="Veislutertur frá Mosfellsbakaríi: marsipantertur, rjómatertur, geltertur, ganache, amerísk og frönsk súkkulaðiterta. Stærðir og verð." />
+<style>
+  :root{
+    --brand:#9a6526; --brand-dark:#774b18;
+    --accent:#f3901d; --accent-dark:#dd7d0b;
+    --ink:#2a2018; --muted:#7c6f62;
+    --bg:#fffdf8; --surface:#f7efe2; --surface-2:#f1e6d4; --line:#ece0cd;
+    --radius:18px; --maxw:1180px;
+    --serif:"Georgia","Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  section{padding:72px 0}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.01em}
+  h1{font-size:clamp(2.3rem,4.5vw,3.2rem)}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.74rem;font-weight:700;color:var(--accent-dark);margin-bottom:10px}
+  .lead{color:var(--muted);font-size:1.1rem;max-width:60ch}
+  .btn{display:inline-block;border:none;cursor:pointer;font-family:var(--sans);font-size:1rem;
+       background:var(--accent);color:#fff;padding:14px 28px;border-radius:999px;font-weight:700;
+       transition:background .2s,transform .2s;box-shadow:0 6px 18px rgba(243,144,29,.28)}
+  .btn:hover{background:var(--accent-dark);transform:translateY(-2px)}
+
+  /* Header (matches front page) */
+  header.site{position:sticky;top:0;z-index:60;background:rgba(255,253,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:700;font-size:1.3rem;color:var(--ink);flex:0 0 auto;white-space:nowrap}
+  .brand img{height:42px;width:auto}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-weight:600;font-size:.97rem;color:var(--ink)}
+  .nav-links a:hover{color:var(--brand)}
+  .nav-right{display:flex;align-items:center;gap:16px}
+  .nav-phone{font-weight:700;color:var(--brand-dark);font-size:.95rem;white-space:nowrap}
+  .nav-cta{background:var(--accent);color:#fff;padding:10px 20px;border-radius:999px;font-weight:700;font-size:.95rem;
+           box-shadow:0 6px 16px rgba(243,144,29,.32);transition:transform .2s,background .2s}
+  .nav-cta:hover{background:var(--accent-dark);transform:translateY(-2px)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+  .burger span{width:25px;height:2px;background:var(--ink);transition:.3s}
+  .mobile-menu{display:none;flex-direction:column;padding:8px 22px 20px;border-bottom:1px solid var(--line);background:var(--bg)}
+  .mobile-menu a{padding:13px 0;font-weight:700;border-bottom:1px solid var(--line)}
+  body.menu-open .mobile-menu{display:flex}
+  body.menu-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  body.menu-open .burger span:nth-child(2){opacity:0}
+  body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* Intro */
+  .page-intro{background:radial-gradient(120% 120% at 85% 0%, var(--surface) 0%, var(--bg) 60%);padding-top:54px}
+  .crumb{font-size:.86rem;color:var(--muted);margin-bottom:16px}
+  .crumb a{color:var(--brand-dark);font-weight:600}
+
+  /* Order rules note */
+  .order-note{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;box-shadow:0 12px 30px rgba(60,40,18,.07);max-width:760px}
+  .order-note p{font-size:.98rem}
+  .order-note .booked{margin-top:12px;font-size:.88rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+  .order-note b{color:var(--ink)}
+
+  /* Cake type cards */
+  .tcards{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:42px}
+  .tcard{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+  .tcard > img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .tcard:hover > img{transform:scale(1.05)}
+  .tcard .head-band{background:linear-gradient(160deg,var(--surface),var(--surface-2));padding:30px 24px}
+  .tcard .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:12px}
+  .tcard h3{font-size:1.4rem}
+  .tcard p{color:var(--muted);font-size:.96rem}
+  .shape{font-size:.84rem;font-weight:700;color:var(--brand-dark);background:var(--surface);padding:9px 13px;border-radius:10px;line-height:1.5}
+  table.price{width:100%;border-collapse:collapse;font-size:.94rem;margin-top:2px}
+  table.price th{text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:6px 6px 8px;border-bottom:1.5px solid var(--line)}
+  table.price td{padding:9px 6px;border-bottom:1px solid var(--line)}
+  table.price td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+  table.price tr:last-child td{border-bottom:none}
+
+  /* Fillings + notes */
+  .fillings{margin-top:18px}
+  .fill-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 30px;margin-top:26px}
+  .fill-list li{position:relative;padding-left:24px;font-size:.98rem;line-height:1.55}
+  .fill-list li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .callout{margin-top:22px;border-radius:14px;padding:16px 20px;font-size:.97rem;max-width:760px}
+  .callout.note{background:var(--surface);color:var(--ink)}
+  .callout.warn{background:#fff3e2;border:1px solid #f1c587;color:#8a5512;font-weight:600;display:flex;align-items:flex-start;gap:10px}
+  .cta-row{margin-top:48px}
+
+  /* Footer (matches front page) */
+  footer.site{background:var(--ink);color:#e9ddcc;padding:64px 0 30px;margin-top:30px}
+  .foot-grid{display:grid;grid-template-columns:1.1fr 1.1fr 1fr;gap:40px}
+  footer.site h4{font-family:var(--serif);font-size:1.25rem;color:#fff;margin-bottom:6px}
+  footer.site .addr{color:#d9c9b2;font-size:.96rem;margin-bottom:10px}
+  footer.site .hours{font-size:.9rem;color:#bcaa90;line-height:1.7}
+  footer.site a.maplink{display:inline-block;margin-top:10px;color:var(--accent);font-weight:700;font-size:.9rem}
+  footer.site .contact a{display:flex;align-items:center;gap:9px;color:#e9ddcc;margin-bottom:8px;font-size:.96rem}
+  footer.site .ico{width:17px;height:17px;flex:0 0 auto;fill:currentColor}
+  footer.site .contact a:hover{color:var(--accent)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:44px;padding-top:22px;font-size:.85rem;color:#9c8c75;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:900px){
+    .tcards{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:820px){
+    .nav-links,.nav-phone,.nav-cta{display:none}
+    .burger{display:flex}
+  }
+  @media (max-width:560px){
+    section{padding:54px 0}
+    .fill-list{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .tcard > img,.tcard:hover > img{transition:none;transform:none}
+  }
+</style>
+</head>
+<body id="top">
+
+<header class="site">
+  <div class="container nav">
+    <a class="brand" href="index.html"><img src="images/logo.jpg" alt="Mosfellsbakarí" /><span>Mosfellsbakarí</span></a>
+    <nav class="nav-links">
+      <a href="index.html#tertur">Skoða tertur</a>
+      <a href="panta.html">Panta tertur</a>
+      <a href="index.html#braud">Brauð</a>
+      <a href="index.html#um">Um okkur</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-cta" href="#hafa-samband">Hafa samband</a>
+      <button class="burger" id="burger" aria-label="Valmynd"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="index.html#tertur">Skoða tertur</a>
+    <a href="panta.html">Panta tertur</a>
+    <a href="index.html#braud">Brauð</a>
+    <a href="index.html#um">Um okkur</a>
+    <a href="#hafa-samband">Hafa samband</a>
+  </nav>
+</header>
+
+<section class="page-intro">
+  <div class="container">
+    <p class="crumb"><a href="index.html">Forsíða</a> · <a href="index.html#serpantanir">Sérgerðar tertur</a> · Veislutertur</p>
+    <p class="eyebrow">Sérgerðar tertur</p>
+    <h1>Veislutertur</h1>
+    <p class="lead">Bjóðum gott úrval af veislutertum í nokkrum stærðum og gerðum.</p>
+    <div class="order-note">
+      <p>Panta þarf allar sérgerðar tertur með <b>þriggja daga fyrirvara</b>, og á <b>miðvikudögum fyrir hádegi</b>, fyrir helgar. Hægt er að panta tertur á netinu <a href="panta.html" style="color:var(--brand-dark);font-weight:700">hér</a> eða í síma <b>566 6145</b> á milli 9:00 og 16:00 virka daga.</p>
+      <p class="booked">Þessir dagar eru fullbókaðir: lokað á tertupantanir 6.–15. júlí 2026 og 10.–24. ágúst 2026.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="tcards">
+
+      <article class="tcard reveal">
+        <img loading="lazy" src="images/veislu-marsipan.jpg" alt="Marsipanterta">
+        <div class="body">
+          <h3>Marsipanterta</h3>
+          <p>Hægt er að velja um nokkrar gerðir af bragðtegundum (sjá dæmi um fyllingar hér að neðan). Tertan er hjúpuð með marsipani og skreytt með handgerðum marsipanrósum. Hægt er að velja lit á rósirnar og láta skrifa á kökuna með súkkulaði (innifalið í verði), en passa verður að hafa textann ekki of langan á minni terturnar. Marsipanið sem tertan er hjúpuð með er ljóst að lit en ef óskað er eftir alveg hvítri tertu er hægt að fá hana hjúpaða með sykurmassa.</p>
+          <p class="shape">Marsipantertur 12–25 manna eru kringlóttar · 30–50 manna eru ferhyrndar</p>
+          <table class="price">
+            <thead><tr><th>Stærð</th><th>Verð</th></tr></thead>
+            <tbody>
+              <tr><td>12 manna</td><td>12.330 kr</td></tr>
+              <tr><td>16 manna</td><td>16.170 kr</td></tr>
+              <tr><td>20 manna</td><td>19.910 kr</td></tr>
+              <tr><td>25 manna</td><td>24.640 kr</td></tr>
+              <tr><td>30 manna</td><td>29.260 kr</td></tr>
+              <tr><td>40 manna</td><td>38.120 kr</td></tr>
+              <tr><td>50 manna</td><td>46.600 kr</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="tcard reveal">
+        <div class="head-band"><h3>Rjómaterta</h3></div>
+        <div class="body">
+          <p>Hægt er að velja um nokkrar gerðir af bragðtegundum (sjá dæmi um fyllingar hér að neðan). Tertan er skreytt með rjóma og súkkulaðiskrauti. Hægt er að láta skrifa á þær (innifalið í verði) en passa verður að hafa textann ekki of langan á minni terturnar.</p>
+          <table class="price">
+            <thead><tr><th>Stærð</th><th>Verð</th></tr></thead>
+            <tbody>
+              <tr><td>12 manna</td><td>12.330 kr</td></tr>
+              <tr><td>16 manna</td><td>16.170 kr</td></tr>
+              <tr><td>20 manna</td><td>19.910 kr</td></tr>
+              <tr><td>25 manna</td><td>24.640 kr</td></tr>
+              <tr><td>30 manna</td><td>29.260 kr</td></tr>
+              <tr><td>40 manna</td><td>38.120 kr</td></tr>
+              <tr><td>50 manna</td><td>46.600 kr</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="tcard reveal">
+        <img loading="lazy" src="images/veislu-gel.jpg" alt="Gelterta">
+        <div class="body">
+          <h3>Gelterta</h3>
+          <p>Hægt er að velja um nokkrar gerðir af bragðtegundum (sjá dæmi um fyllingar hér að neðan). Tertan er skreytt með karamellugeli, jarðaberjageli eða súkkulaðigeli, berjum og súkkulaðiskrauti. Hægt er að láta skrifa á þær (innifalið í verði) en passa verður að hafa textann ekki of langan á minni terturnar.</p>
+          <table class="price">
+            <thead><tr><th>Stærð</th><th>Verð</th></tr></thead>
+            <tbody>
+              <tr><td>12 manna</td><td>11.810 kr</td></tr>
+              <tr><td>16 manna</td><td>15.410 kr</td></tr>
+              <tr><td>20 manna</td><td>19.130 kr</td></tr>
+              <tr><td>25 manna</td><td>23.620 kr</td></tr>
+              <tr><td>30 manna</td><td>27.980 kr</td></tr>
+              <tr><td>40 manna</td><td>36.590 kr</td></tr>
+              <tr><td>50 manna</td><td>44.670 kr</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="tcard reveal">
+        <img loading="lazy" src="images/veislu-ganache.jpg" alt="Ganache hjúpuð terta">
+        <div class="body">
+          <h3>Ganache hjúpuð</h3>
+          <p>Það er hægt að hjúpa geltertur og súkkulaðitertur með súkkulaði ganache.</p>
+          <p class="shape">12–30 manna ganachetertur eru kringlóttar · ferhyrndar ganachetertur fást frá 30–50 manna</p>
+          <table class="price">
+            <thead><tr><th>Stærð</th><th>Verð</th></tr></thead>
+            <tbody>
+              <tr><td>12 manna</td><td>12.330 kr</td></tr>
+              <tr><td>16 manna</td><td>16.170 kr</td></tr>
+              <tr><td>20 manna</td><td>19.910 kr</td></tr>
+              <tr><td>25 manna</td><td>24.640 kr</td></tr>
+              <tr><td>30 manna</td><td>29.260 kr</td></tr>
+              <tr><td>40 manna</td><td>38.120 kr</td></tr>
+              <tr><td>50 manna</td><td>46.600 kr</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="tcard reveal">
+        <img loading="lazy" src="images/veislu-amerisk.jpg" alt="Amerísk súkkulaðiterta">
+        <div class="body">
+          <h3>Amerísk súkkulaðiterta</h3>
+          <p>Er þriggja botna súkkulaðiterta með súkkulaðikremi á milli og ofan á. Þær eru skreyttar með súkkulaðiskrauti og berjum. Hægt er að láta skrifa á þær (innifalið í verði) en passa verður að hafa textann ekki of langan á minni terturnar.</p>
+          <table class="price">
+            <thead><tr><th>Stærð</th><th>Verð</th></tr></thead>
+            <tbody>
+              <tr><td>12 manna</td><td>9.600 kr</td></tr>
+              <tr><td>16 manna</td><td>12.980 kr</td></tr>
+              <tr><td>20 manna</td><td>15.820 kr</td></tr>
+              <tr><td>25 manna</td><td>19.770 kr</td></tr>
+              <tr><td>30 manna</td><td>23.440 kr</td></tr>
+              <tr><td>40 manna</td><td>30.940 kr</td></tr>
+              <tr><td>50 manna</td><td>38.120 kr</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="tcard reveal">
+        <div class="head-band"><h3>Frönsk súkkulaðiterta</h3></div>
+        <div class="body">
+          <p>Er eins botna kaka með miklu súkkulaði í botninum. Hún er skreytt með súkkulaði ganache, súkkulaðiskrauti og berjum.</p>
+          <table class="price">
+            <thead><tr><th>Stærð</th><th>Verð</th></tr></thead>
+            <tbody>
+              <tr><td>12 manna</td><td>10.660 kr</td></tr>
+              <tr><td>16 manna</td><td>13.740 kr</td></tr>
+              <tr><td>20 manna</td><td>16.570 kr</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Fillings -->
+    <div class="fillings reveal">
+      <h2>Dæmi um fyllingar</h2>
+      <ul class="fill-list">
+        <li>með baileys fromage, peru, súkkulaðikremi, marengs og sólberjasultu.</li>
+        <li>með baileys fromage, banana, súkkulaðikremi, marengs og sólberjasultu.</li>
+        <li>með nougat fromage, perum, súkkulaðikremi, marengs og sólberjasultu.</li>
+        <li>með nougat fromage, banana, súkkulaðikremi, marengs og sólberjasultu.</li>
+        <li>með jarðarberjafomage, vanillukremi, jarðarberjum, marengs, súkkulaðikremi og jarðarberjasultu.</li>
+        <li>með hindberjafromage, vanillukremi, hindberjum, marengs, súkkulaðikremi og hindberjasultu.</li>
+        <li>með súkkulaði mousse, hindberjum og aprikósusultu.</li>
+        <li>með súkkulaði mousse, perum og aprikósusultu.</li>
+        <li>með sherry fromage, makkarónum, súkkulaðikremi, marengs, blönduðum ávöxtum og sólberjasultu.</li>
+        <li>með karamellu og krókant fromage, marengs, súkkulaðikremi, blönduðum ávöxtum og sólberjasultu.</li>
+      </ul>
+      <div class="callout note">Það er hægt að hjúpa geltertur og súkkulaðitertur með súkkulaði ganache.</div>
+      <div class="callout warn"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:19px;height:19px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M12 3.5 22 20H2L12 3.5z"/><path d="M12 10v4"/><circle cx="12" cy="17.3" r=".6" fill="currentColor" stroke="none"/></svg><span>Ekki er hægt að ábyrgjast tertur vegna hnetuofnæmis, því hér er unnið með hnetur.</span></div>
+
+      <div class="cta-row"><a class="btn" href="panta.html">Panta tertu</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site" id="hafa-samband">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>Mosfellsbær</h4>
+        <p class="addr">Bjarkarholti 3-5, 270 Mosfellsbæ</p>
+        <p class="hours">Virka daga 7:30–17:30<br>Laugardaga 8:00–16:00<br>Sunnudaga 8:30–16:00</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Bjarkarholti+3-5+Mosfellsb%C3%A6r" target="_blank" rel="noopener">Sjá á korti →</a>
+      </div>
+      <div>
+        <h4>Reykjavík</h4>
+        <p class="addr">Háaleitisbraut 58-60, 108 Reykjavík</p>
+        <p class="hours">Virka daga 7:30–17:00<br>Laugardaga 8:00–16:00<br>Sunnudaga 8:30–16:00</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=H%C3%A1aleitisbraut+58-60+Reykjav%C3%ADk" target="_blank" rel="noopener">Sjá á korti →</a>
+      </div>
+      <div class="contact">
+        <h4>Hafa samband</h4>
+        <a href="tel:+3545666145"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg>566 6145</a>
+        <a href="mailto:mosbak@mosbak.is"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v.4l-10 6-10-6V6a1 1 0 0 1 1-1zm-1 3.2 10 6 10-6V18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8.2z"/></svg>mosbak@mosbak.is</a>
+        <a href="https://www.facebook.com/pages/Mosfellsbakar%C3%AD/101119029927855" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 21v-8h2.6l.4-3H13V8c0-.9.3-1.5 1.6-1.5H16V4.1C15.6 4 14.7 4 13.7 4 11.5 4 10 5.3 10 7.7V10H7.5v3H10v8z"/></svg>Facebook</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Mosfellsbakarí — stofnað 1982</span>
+      <span>Bjarkarholti 3-5, Mosfellsbæ · Háaleitisbraut 58-60, Reykjavík</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('burger').addEventListener('click',function(){document.body.classList.toggle('menu-open');});
+  document.querySelectorAll('.mobile-menu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});
+  document.getElementById('year').textContent=new Date().getFullYear();
+  (function(){
+    var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els=document.querySelectorAll('.reveal');
+    document.querySelectorAll('.tcards .tcard').forEach(function(el,i){el.style.transitionDelay=(Math.min(i,6)*55)+'ms';});
+    if(reduce||!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in');});return;}
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  })();
+</script>
+</body>
+</html>
